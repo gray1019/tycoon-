@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>INFINITE — Factory Tycoon</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>INFINITE <small>Factory Tycoon</small></h1>
+  <div class="stat"><span>Cash</span><b id="cash" class="cash">$0</b></div>
+  <div class="stat"><span>Income</span><b id="inc">$0/s</b></div>
+  <div class="stat"><span>Parts sold</span><b id="sold">0</b></div>
+  <div class="stat"><span>Rebirths · points</span><b id="rebirthStat">0 · 0</b></div>
+  <button id="reset" class="ghost">Reset</button>
+</header>
+<main>
+  <section id="stage">
+    <canvas id="board"></canvas>
+    <p id="hint"></p>
+    <div id="quest"></div>
+    <div id="toast"></div>
+    <div id="hud" hidden></div>
+    <div id="cam">
+      <button data-cam="left" title="Turn view left (← key)" aria-label="Turn view left">&#8634;</button>
+      <button data-cam="right" title="Turn view right (→ key)" aria-label="Turn view right">&#8635;</button>
+      <button data-cam="up" title="Look from higher up (↑ key)">Tilt &#8593;</button>
+      <button data-cam="down" title="Look from lower down (↓ key)">Tilt &#8595;</button>
+      <button data-cam="in" title="Zoom in (+ or mouse wheel)" aria-label="Zoom in">+</button>
+      <button data-cam="out" title="Zoom out (- or mouse wheel)" aria-label="Zoom out">&minus;</button>
+      <button data-cam="reset" title="Back to the default view (0 key)">Reset view</button>
+      <button data-cam="full" id="fullBtn" title="Hide the panels and use the whole screen (F key)">Full view</button>
+    </div>
+  </section>
+  <aside>
+    <nav><button data-tab="build" class="on">Build</button><button data-tab="lab">Lab</button><button data-tab="worlds">Worlds</button></nav>
+    <div id="cats"></div>
+    <div id="build" class="pane"></div>
+    <div id="lab" class="pane" hidden></div>
+    <div id="worlds" class="pane" hidden></div>
+    <div id="insp" hidden></div>
+    <button id="expand"></button>
+    <button id="clear">Remove all</button>
+  </aside>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
